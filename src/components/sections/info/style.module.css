@@ -1,0 +1,202 @@
+.info{
+    height: 100dvh;
+    background-image: url("/info/info-bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.info__container{
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.card__list{
+    width: 100%;
+    padding: 40px;
+    counter-reset: item;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+    place-items: center; 
+    gap: 40px;  
+    border-radius: 30px;
+    border: 2px solid rgba(64, 181, 232, 0.38);
+    background: #25253D;
+}
+
+.list__item{
+    max-width: 374px;
+    padding-block: 20px;
+    padding-inline: 18px;
+    border-radius: 20px;
+    background: #333351;
+    list-style: none;
+    position: relative;
+}
+
+.list__item::before{
+    counter-increment: item; 
+    content: '' counter(item) '';
+    width: 30px;
+    height: 30px;
+    display: block;
+    text-align: center;
+    color: #FB5;
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    position: absolute;
+    background: #333351;
+    left: 10px;
+    top: 20px;
+}
+
+.item__image{
+    border-bottom: 1px solid hsl(248, 100%, 92%, .1);
+    padding-block-end: 17px;
+    margin-block-end: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item__innerlist{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-block-end: 18px;
+}
+
+.inner__item{
+    width: 47px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+}
+
+.raite__box{
+    margin-block-end: 28px;
+}
+
+.raite__title{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.code__box{
+    padding-inline: 20px;
+    padding-block-end: 13px;
+    padding-block-start: 27px;
+    display: flex;
+    align-items:center;
+    border-radius: 10px;
+    border: 1px dashed #B4CDD2;
+    position: relative;
+    z-index: 1;
+    margin-block-end: 23px;
+}
+
+.promocode__title{
+    color: #ABABAB;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-inline-end: 8px;
+}
+
+.code{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-inline-start: 26px;
+}
+
+.item__discount{
+    padding-inline: 26px;
+    padding-block: 6px;
+    width: max-content;
+    background-image: url("/card/discount.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-inline: auto;
+    margin-bottom: -20px;
+    position: relative;
+    z-index: 10;
+}
+
+.button__group{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.progress__number{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.progress__box{
+    width: 57px;
+    height: 57px;
+    position: relative;
+}
+
+.progress__number{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.style__box{
+    display: flex;
+    align-items:center;
+    gap: 3px;
+    margin-block-end: 22px;
+}
+
+.star{
+    flex-grow: 2;
+    flex-shrink: 0;
+    width: max-content;
+    width: 26px;
+    height: 26px;
+    background-color: #FB5;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.line{
+    width: 100%;
+    height: 1px;
+    background: #FB5;
+}
+

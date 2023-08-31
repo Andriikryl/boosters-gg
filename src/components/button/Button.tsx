@@ -25,6 +25,8 @@ export function Button({
       className={clsx(className, {
         Button__disabeled: isDisabeled,
         [style.button__bust]: type === "button__bust",
+        [style.read]: type === "read",
+        [style.order]: type === "order",
       })}
       disabled={isDisabeled}
       type={typeButton}
