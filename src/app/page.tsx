@@ -1,8 +1,8 @@
 import Hero from "@/components/sections/hero/Hero";
-import styles from "./page.module.css";
 import Info from "@/components/sections/info/Info";
 import Sales from "@/components/sections/sales/Sales";
 import Who from "@/components/sections/who/Who";
+import Adventeges from "@/components/sections/advanteges/Adventeges";
 
 export default function Home() {
   return (
@@ -11,6 +11,7 @@ export default function Home() {
       <Info />
       <Sales />
       <Who />
+      <Adventeges />
     </>
   );
 }

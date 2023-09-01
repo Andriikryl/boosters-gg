@@ -1,0 +1,110 @@
+.list__item{
+    flex-grow: 1;
+    max-width: 270px ;
+    border-radius: 10px;
+    background: #201E29;
+    padding-block-start: 25px;
+    padding-inline-start: 20px;
+    position: relative;
+}
+
+
+.sub__decor{
+    display: inline-block;
+    transform: rotate(360deg);
+    width: 39px;
+    height: 100%;
+    position: absolute;
+    border-radius: 0px 10px 10px 0px;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.list__item:nth-child(1) .sub__decor{
+    background: linear-gradient(180deg, #E74269 0%, #DD4CEE 100%);
+}
+.list__item:nth-child(2) .sub__decor{
+    background: linear-gradient(180deg, #A33DF3 46.95%, #6EB5D3 93.73%, #77F4F3 100%);
+}
+.list__item:nth-child(3) .sub__decor{
+    background: linear-gradient(180deg, #FA5D10 0%, #FC9D05 95.31%);
+}
+.list__item:nth-child(4) .sub__decor{
+    background: linear-gradient(180deg, #4BDC06 0%, #1C823F 100%);
+}
+
+.list__item:nth-child(2) .sub__title{
+    right: -91px;
+    top: 116px;
+}
+.list__item:nth-child(3) .sub__title{
+    right: -71px;
+    top: 95px;
+}
+
+.list__item:nth-child(1) .item__title{
+    color: #E64272;
+}
+.list__item:nth-child(2) .item__title{
+    color: hsla(274, 88%, 60%, 1);
+}
+.list__item:nth-child(3) .item__title{
+    color: hsla(20, 96%, 52%, 1);
+}
+.list__item:nth-child(4) .item__title{
+    color: hsla(101, 93%, 44%, 1);
+}
+
+.sub__title{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: uppercase;
+    display: block;
+    transform: rotate(90deg);
+    position: absolute;
+    z-index: 10;
+    right: -18px;
+    top: 40px;
+}
+
+.image__box{
+    margin-block-end: 20px;
+}
+
+.item__title{
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    position: relative;
+    margin-block-end: 15px;
+    padding-block-end: 15px;
+}
+
+.item__title::after{
+    content: "";
+    display: block;
+    width: 191px;
+    height: 1px;
+    background-color:  #3C3A42;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.item__description{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 161.523%; 
+    max-width: 191px;
+    padding-block-end: 10px;
+}
