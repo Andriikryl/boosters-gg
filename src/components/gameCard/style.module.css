@@ -1,0 +1,66 @@
+.list__item{
+    border-radius: 23px;
+    border: 2px solid #FFF;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-width: 270px;
+    min-height: 474px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.list__item:nth-child(1){
+    background: url("/gameCard/game-card-1.jpg");
+}
+.list__item:nth-child(2){
+    background: url("/gameCard/game-card-2.jpg");
+}
+.list__item:nth-child(3){
+    background: url("/gameCard/game-card-3.jpg");
+}
+.list__item:nth-child(4){
+    background: url("/gameCard/game-card-4.jpg");
+}
+
+.item__info{
+    clip-path: polygon(1% 100%, 0 18%, 100% 0, 100% 100%);
+    stroke-width: 1px;
+    stroke: #53ABD0;
+    backdrop-filter: blur(12.5px);
+    padding-block-start: 60px;
+    padding-inline: 18px;
+    position: relative;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    overflow: hidden;
+}
+
+.item__title{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    max-width: 240px;
+    margin-block-end: 20px;
+}
+
+.flex__group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-block-end: 24px;
+}
+
+.item__cost{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
