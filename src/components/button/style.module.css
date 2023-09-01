@@ -17,6 +17,7 @@
     display: flex;
     align-items: center;
     gap: 20px;
+    min-width: 150px;
 }
 
 .button__bust::after{
@@ -46,6 +47,7 @@
     box-shadow: 0px 4px 49px 0px rgba(0, 178, 254, 0.50);
     cursor: pointer;
     background-color: transparent;
+    min-width: 170px;
 }
 
 .order{
@@ -65,4 +67,5 @@
     box-shadow: 0px 4px 49px 0px rgba(0, 178, 254, 0.50);
     cursor: pointer;
     background-color: transparent;
+    min-width: 150px;
 }

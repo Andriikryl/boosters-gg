@@ -1,0 +1,194 @@
+.list__item{
+    width: 100%;
+    padding-block: 20px;
+    padding-inline: 18px;
+    border-radius: 20px;
+    background: #333351;
+    list-style: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.paymaent__box{
+    margin-inline-start: 17px;
+}
+
+.payment__title{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-block-end: 10px;
+}
+
+
+.item__image{
+    display: flex;
+    align-items: center;
+    gap: 34px;
+}
+
+
+.item__innerlist{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-block-end: 18px;
+}
+
+.inner__item{
+    width: 47px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+}
+
+.raite__box{
+    margin-block-end: 28px;
+}
+
+.raite__title{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.code__box{
+    margin-inline-start: 20px;
+    padding-inline: 13px;
+    padding-block: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    border-radius: 10px;
+    border: 1px dashed #B4CDD2;
+    position: relative;
+    z-index: 1;
+}
+
+.promocode__title{
+    color: #ABABAB;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-inline-end: 8px;
+}
+
+.code{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.item__discount{
+    padding-inline: 40px;
+    padding-block: 9px;
+    width: max-content;
+    background-image: url("/card/discount.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: block;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-inline: auto;
+    position: absolute;
+    top: -33px;
+    z-index: 10;
+}
+
+.btn__box{
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+}
+
+.button__group{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.progress__number{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.progress__box{
+    width: 57px;
+    height: 57px;
+    position: relative;
+}
+
+
+
+.progress__box::before{
+    content: "";
+    display: block;
+    height: 100%;
+    width: 1px;
+    background-color: hsla(248, 100%, 92%, .1);
+    position: absolute;
+    left: -17px;
+}
+
+.progress__number{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.style__box{
+    display: flex;
+    align-items:center;
+    gap: 3px;
+    margin-block-end: 22px;
+}
+
+.star{
+    flex-grow: 2;
+    flex-shrink: 0;
+    width: max-content;
+    width: 26px;
+    height: 26px;
+    background-color: #FB5;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.line{
+    width: 100%;
+    height: 1px;
+    background: #FB5;
+}
+
+.flex__group{
+    display: flex;
+    align-items:baseline;
+    gap: 17px;
+    margin-inline-start: 23px;
+}
