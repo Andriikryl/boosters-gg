@@ -1,0 +1,59 @@
+.blog{
+    background-image: url("/blog/blog.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-block: 80px;
+    position: relative;
+}
+
+.blog::after{
+    content: "";
+    display: block;
+    width: 20%;
+    height: 100%;
+    background-image: url("/blog/ligth-r.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.blog::before{
+    content: "";
+    display: block;
+    width: 20%;
+    height: 100%;
+    background-image: url("/blog/ligth-l.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.blog__title{
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    margin-block-end: 60px;
+}
+
+.blog__list{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-block-end: 50px;
+}
+
+.button{
+    margin-inline: auto;
+}
