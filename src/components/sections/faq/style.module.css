@@ -1,0 +1,37 @@
+.faq{
+    padding-block: 100px;
+    background: #110F1A;
+}
+
+.faq__title{
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    margin-block-end: 60px;
+}
+
+.faq__box{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1170px;
+    margin-inline: auto;
+}
+
+
+.accordion__box{
+    padding-block-start: 40px;
+}
+
+.accordion__body{
+    color: #B1B1B1;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 161.523%; /* 29.074px */
+}
