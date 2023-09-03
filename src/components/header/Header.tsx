@@ -14,26 +14,32 @@ const links = [
   {
     id: 1,
     link: "Home",
+    href: "/home",
   },
   {
     id: 2,
     link: "Games",
+    href: "/games",
   },
   {
     id: 3,
     link: "Services",
+    href: "/services",
   },
   {
     id: 4,
     link: "Blog",
+    href: "/blog",
   },
   {
     id: 5,
     link: "About us",
+    href: "/about",
   },
   {
     id: 6,
     link: "Contacts",
+    href: "/contacts",
   },
 ];
 
@@ -41,50 +47,62 @@ const sideLinks = [
   {
     id: 1,
     link: "WoW Boosting",
+    href: "/wow",
   },
   {
     id: 2,
     link: "Destiny 2 Boosting",
+    href: "/destiny",
   },
   {
     id: 3,
     link: "Fifa Boosting",
+    href: "/fifa",
   },
   {
     id: 4,
     link: "COD War Zone Boosting",
+    href: "/cod",
   },
   {
     id: 5,
     link: "Valorant Boosting",
+    href: "/valorant",
   },
   {
     id: 6,
     link: "Overwatch Boosting",
+    href: "/overwatch",
   },
   {
     id: 7,
     link: "Lol Boosting",
+    href: "/lol",
   },
   {
     id: 8,
     link: "Dota 2 Boosting",
+    href: "/dota",
   },
   {
     id: 9,
     link: "GTA5 Boosting",
+    href: "/gta",
   },
   {
     id: 10,
     link: "APEX Boosting",
+    href: "/apex",
   },
   {
     id: 11,
     link: "Overwatch 2 Boosting",
+    href: "/overwatchTwo",
   },
   {
     id: 12,
     link: "Fortnite Boosting",
+    href: "/fortnite",
   },
 ];
 

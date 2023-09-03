@@ -1,0 +1,23 @@
+.hero__box{
+    margin-block-start: 135px;
+    max-width: 635px;
+}
+.hero__title{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    margin-block-end: 30px;
+}
+
+.hero__description{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 161.523%; 
+    margin-block-end: 40px;
+}

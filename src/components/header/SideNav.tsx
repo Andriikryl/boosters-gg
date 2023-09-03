@@ -7,6 +7,7 @@ interface ISideNav {
   sideLinks: {
     id: number;
     link: string;
+    href: string;
   }[];
 }
 
@@ -21,7 +22,7 @@ export default function SideNav({ activeStateSide, sideLinks }: ISideNav) {
         {sideLinks.map((link) => {
           return (
             <li key={link.id} className={style.side__item}>
-              <Link className={style.side__link} href={"/"}>
+              <Link className={style.side__link} href={link.href}>
                 {link.link}
               </Link>
             </li>

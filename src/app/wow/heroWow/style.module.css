@@ -1,0 +1,12 @@
+.hero{
+    height: 100dvh;
+    background-image: url("/gamePages/wow-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+.hero__container{
+    display: flex;
+    align-items: center;
+}

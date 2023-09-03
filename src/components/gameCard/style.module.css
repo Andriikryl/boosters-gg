@@ -25,6 +25,34 @@
     background: url("/gameCard/game-card-4.jpg");
 }
 
+.list__item:nth-child(5){
+    background: url("/gameCard/game-card-1.jpg");
+}
+.list__item:nth-child(6){
+    background: url("/gameCard/game-card-2.jpg");
+}
+.list__item:nth-child(7){
+    background: url("/gameCard/game-card-3.jpg");
+}
+.list__item:nth-child(8){
+    background: url("/gameCard/game-card-4.jpg");
+}
+
+.list__item:nth-child(9){
+    background: url("/gameCard/game-card-1.jpg");
+}
+.list__item:nth-child(10){
+    background: url("/gameCard/game-card-2.jpg");
+}
+.list__item:nth-child(11){
+    background: url("/gameCard/game-card-3.jpg");
+}
+.list__item:nth-child(12){
+    background: url("/gameCard/game-card-4.jpg");
+}
+
+
+
 .item__info{
     clip-path: polygon(1% 100%, 0 18%, 100% 0, 100% 100%);
     stroke-width: 1px;
