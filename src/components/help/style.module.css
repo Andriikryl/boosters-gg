@@ -1,0 +1,63 @@
+.help{
+    padding-block: 30px;
+    background-image: url("/help/help-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.help::after{
+    content: "";
+    display: block;
+    background-image: url("/help/hepl-image.png");
+    width: 778px;
+    height: 319px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.help__box{
+    max-width: 647px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    z-index: 10;
+}
+
+.help__subTitle{
+    display: block;
+    color: #EBFF6F;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.help__title{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.help__description{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 139.523%; 
+}
+
+.help__btn{
+    width: max-content;
+}
