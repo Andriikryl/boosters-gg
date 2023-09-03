@@ -1,0 +1,27 @@
+.hero{
+    height: 100dvh;
+    background-image: url("/gamePages/cod-war.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center right;
+    position: relative;
+}
+
+.hero::after{
+    content: "";
+    display: block;
+    background-image: url("/gamePages/code-prev.png");
+    width: 629px;
+    height: 478px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.hero__container{
+    display: flex;
+    align-items: center;
+}

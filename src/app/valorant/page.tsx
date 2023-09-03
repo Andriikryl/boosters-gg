@@ -1,11 +1,11 @@
 import React from "react";
-import HeroWow from "./heroWow/HeroWow";
+import HeroValorant from "./heroValorant/HeroValorant";
 import GamePageGroup from "@/components/gamePageGroup/GamePageGroup";
 
-export default function Wow() {
+export default function Valorant() {
   return (
     <>
-      <HeroWow />
+      <HeroValorant />
       <GamePageGroup />
     </>
   );

@@ -1,0 +1,13 @@
+.hero{
+    height: 100dvh;
+    background-image: url("/gamePages/valorant-bg.png");
+    background-size: 572px 515px;
+    background-repeat: no-repeat;
+    background-position: right;
+    position: relative;
+}
+
+.hero__container{
+    display: flex;
+    align-items: center;
+}

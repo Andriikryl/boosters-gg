@@ -1,11 +1,12 @@
 import React from "react";
-import HeroWow from "./heroWow/HeroWow";
-import GamePageGroup from "@/components/gamePageGroup/GamePageGroup";
 
-export default function Wow() {
+import GamePageGroup from "@/components/gamePageGroup/GamePageGroup";
+import HeroDota from "./heroApex/HeroApex";
+
+export default function Apex() {
   return (
     <>
-      <HeroWow />
+      <HeroDota />
       <GamePageGroup />
     </>
   );

@@ -1,0 +1,13 @@
+.hero{
+    height: 100dvh;
+    background-color: #110F1A;
+    background-image: url("/gamePages/fifa.png");
+    background-size: 483px 485px;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.hero__container{
+    display: flex;
+    align-items: center;
+}

@@ -96,8 +96,8 @@ const sideLinks = [
   },
   {
     id: 11,
-    link: "Overwatch 2 Boosting",
-    href: "/overwatchTwo",
+    link: "Battlefield",
+    href: "/battlefield",
   },
   {
     id: 12,

@@ -1,11 +1,11 @@
 import React from "react";
-import HeroWow from "./heroWow/HeroWow";
+import HeroDestyny from "./heroDestyny/HeroDestyny";
 import GamePageGroup from "@/components/gamePageGroup/GamePageGroup";
 
-export default function Wow() {
+export default function Destiny() {
   return (
     <>
-      <HeroWow />
+      <HeroDestyny />
       <GamePageGroup />
     </>
   );
