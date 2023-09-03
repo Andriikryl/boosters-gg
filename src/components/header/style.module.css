@@ -7,6 +7,7 @@
 }
 
 .header__box{
+    flex-grow: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -32,7 +33,7 @@
     line-height: normal;
 }
 
-.burger {
+.burger__menu {
     --burger-width: 30px;
     --burger-height: 20px;
     --burger-line-height: 2px;
@@ -149,7 +150,7 @@
 }
 
 @media (max-width:1140px) {
-    .burger{
+    .burger__menu{
       display: block;
       margin-inline-start: 22px;
     }
@@ -161,4 +162,258 @@
     -moz-transform: none;
     -ms-transform: none;
     -o-transform: none;
+  }
+
+
+
+  .burger{
+    --burger-width: 30px;
+    --burger-height: 20px;
+    --burger-line-height: 2px;
+    position: relative;
+    border: none;
+    padding: 0;
+    width: var(--burger-width);
+    height: var(--burger-height);
+    color: hsla(0, 0%, 100%, 1);
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    z-index: 100;
+  }
+  
+  .burger::before,
+  .burger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: var(--burger-line-height);
+    background-color: currentColor;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+  }
+  .burger::before {
+    top: 0;
+  }
+  .burger::after {
+    top: calc(100% - var(--burger-line-height));
+  }
+  
+
+  .burger__line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: var(--burger-line-height);
+    background-color: hsla(0, 0%, 100%, 1) ;
+    transform: translateY(-50%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .burger__active::before {
+    top: 50%;
+    transform: rotate(45deg);
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+  }
+  
+  .burger__active::after {
+    top: 50%;
+    transform: rotate(-45deg);
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+  }
+  
+  .burger__active .burger__line {
+    transform: scale(0);
+    transition: transform 0.3s ease-in-out;
+  }
+
+
+  .header__container{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .nav__sideBar{
+      visibility: hidden;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 30%;
+      background: hsl(252, 17%, 12%, .7);
+      backdrop-filter: blur(10px);
+      height: 100vh;
+      z-index: 20;
+      padding-block-start: 100px;
+      padding-inline-start: 70px;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out, visibility 0.5s ease-in-out;
+      -webkit-transition: transform 0.3s ease-in-out, visibility 0.5s ease-in-out;
+      -moz-transition: transform 0.3s ease-in-out, visibility 0.5s ease-in-out;
+      -ms-transition: transform 0.3s ease-in-out, visibility 0.5s ease-in-out;
+      -o-transition: transform 0.3s ease-in-out, visibility 0.5s ease-in-out;
+      -webkit-transform: translateX(-100%);
+      -moz-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+      -o-transform: translateX(-100%);
+  }
+
+  .nav__sideBar.menu_active{
+    visibility: visible;
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+  }
+
+  .side__item{
+    padding: 5px;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    box-shadow: 0 1px 1px rgba(247, 246, 246, 0.976), 
+    0 2px 2px rgba(241, 240, 240, 0.762), 
+    0 4px 4px rgba(239, 236, 236, 0.473), 
+    0 8px 8px rgba(234, 231, 231, 0.31);
+    transition: all 500ms ease-in-out;
+  }
+
+  .side__item:hover{
+    box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+    0 2px 2px rgba(0,0,0,0.11), 
+    0 4px 4px rgba(0,0,0,0.11), 
+    0 8px 8px rgba(0,0,0,0.11), 
+    0 16px 16px rgba(0,0,0,0.11), 
+    0 32px 32px rgba(0,0,0,0.11);
+  }
+  
+  
+  .side__item::after{
+    content: "";
+    display: block;
+    width: 1%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -5px;
+    transition: all 400ms ease-in-out;
+    mix-blend-mode: color;
+  }
+
+  .side__item:nth-child(1)::after{
+    background-color: tomato;
+  }
+  .side__item:nth-child(2)::after{
+    background-color: #606c38;
+  }
+  .side__item:nth-child(3)::after{
+    background-color: #cdb4db;
+  }
+  .side__item:nth-child(4)::after{
+    background-color: #ffc8dd;
+  }
+  .side__item:nth-child(5)::after{
+    background-color: #a2d2ff;
+  }
+  .side__item:nth-child(6)::after{
+    background-color: #f72585;
+  }
+  .side__item:nth-child(7)::after{
+    background-color: #7209b7;
+  }
+  .side__item:nth-child(8)::after{
+    background-color: #3a0ca3;
+  }
+  .side__item:nth-child(9)::after{
+    background-color: #4361ee;
+  }
+  .side__item:nth-child(10)::after{
+    background-color: #4cc9f0;
+  }
+  .side__item:nth-child(11)::after{
+    background-color: #eae2b7;
+  }
+  .side__item:nth-child(12)::after{
+    background-color: #003049;
+  }
+
+  .side__item:hover::after{
+    width: 100%;
+  }
+
+  .side__item::before{
+    content: "";
+    display: block;
+    width: 33px;
+    height: 33px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .side__item:nth-child(1)::before{
+    background-image: url("/sideLinks/wow.svg");
+  }
+  .side__item:nth-child(2)::before{
+    background-image: url("/sideLinks/destiny.svg");
+  }
+  .side__item:nth-child(3)::before{
+    background-image: url("/sideLinks/fifa.svg");
+  }
+  .side__item:nth-child(4)::before{
+    background-image: url("/sideLinks/code.svg");
+  }
+  .side__item:nth-child(5)::before{
+    background-image: url("/sideLinks/valarant.svg");
+  }
+  .side__item:nth-child(6)::before{
+    background-image: url("/sideLinks/overwarch.svg");
+  }
+  .side__item:nth-child(7)::before{
+    background-image: url("/sideLinks/lol.svg");
+  }
+  .side__item:nth-child(8)::before{
+    background-image: url("/sideLinks/dota.svg");
+  }
+  .side__item:nth-child(9)::before{
+    background-image: url("/sideLinks/gta.svg");
+  }
+
+  .side__item:nth-child(10)::before{
+    background-image: url("/sideLinks/apex.svg");
+  }
+
+  .side__item:nth-child(11)::before{
+    background-image: url("/sideLinks/overwatch.svg");
+  }
+
+  .side__item:nth-child(12)::before{
+    background-image: url("/sideLinks/frontnigth.svg");
+  }
+
+
+
+
+  .side__list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .side__link{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
   }

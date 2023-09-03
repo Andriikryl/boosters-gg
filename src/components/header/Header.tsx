@@ -6,6 +6,9 @@ import Link from "next/link";
 import Logo from "public/logo/logo.svg";
 import Image from "next/image";
 import BurgerButton from "./BurgerButton";
+import BurgerSideBar from "./BurgerSideBar";
+import SideNav from "./SideNav";
+import HeaderNav from "./HeaderNav";
 
 const links = [
   {
@@ -34,8 +37,60 @@ const links = [
   },
 ];
 
+const sideLinks = [
+  {
+    id: 1,
+    link: "WoW Boosting",
+  },
+  {
+    id: 2,
+    link: "Destiny 2 Boosting",
+  },
+  {
+    id: 3,
+    link: "Fifa Boosting",
+  },
+  {
+    id: 4,
+    link: "COD War Zone Boosting",
+  },
+  {
+    id: 5,
+    link: "Valorant Boosting",
+  },
+  {
+    id: 6,
+    link: "Overwatch Boosting",
+  },
+  {
+    id: 7,
+    link: "Lol Boosting",
+  },
+  {
+    id: 8,
+    link: "Dota 2 Boosting",
+  },
+  {
+    id: 9,
+    link: "GTA5 Boosting",
+  },
+  {
+    id: 10,
+    link: "APEX Boosting",
+  },
+  {
+    id: 11,
+    link: "Overwatch 2 Boosting",
+  },
+  {
+    id: 12,
+    link: "Fortnite Boosting",
+  },
+];
+
 export default function Header() {
   const [activeState, setActiveState] = useState(false);
+  const [activeStateSide, setActiveStateSide] = useState(false);
 
   useEffect(() => {
     const html = document.querySelector("html");
@@ -45,28 +100,22 @@ export default function Header() {
   const handleClick = () => {
     setActiveState((prev) => !prev);
   };
+  const handleClickSide = () => {
+    setActiveStateSide((prev) => !prev);
+  };
   return (
     <header className={style.header}>
-      <Container>
+      <Container className={style.header__container}>
+        <BurgerSideBar
+          onClick={handleClickSide}
+          activeState={activeStateSide}
+        />
         <div className={style.header__box}>
           <Link href={"/"}>
             <Image src={Logo} width={270} height={57} alt="Booster gg" />
           </Link>
-          <nav
-            className={`${style.nav} ${activeState ? style.menu_active : ""}`}
-          >
-            <ul className={style.nav__list}>
-              {links.map((link) => {
-                return (
-                  <li key={link.id} className={style.list__item}>
-                    <Link className={style.item__link} href={"/"}>
-                      {link.link}
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
+          <HeaderNav activeState={activeState} links={links} />
+          <SideNav activeStateSide={activeStateSide} sideLinks={sideLinks} />
           <BurgerButton onClick={handleClick} activeState={activeState} />
         </div>
       </Container>

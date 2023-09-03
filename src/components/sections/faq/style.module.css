@@ -1,6 +1,18 @@
 .faq{
     padding-block: 100px;
     background: #110F1A;
+    position: relative;
+}
+
+.faq::before{
+    content: "";
+    display: block;
+    background-image: url("/faq/image 44.png");
+    width: 403px;
+    height: 347px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 .faq__title{
