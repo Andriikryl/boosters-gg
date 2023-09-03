@@ -1,0 +1,116 @@
+.steps{
+    padding-block: 120px;
+    background: #110F1A;
+}
+
+.steps__title{
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    margin-block-end: 60px;
+}
+
+.steps__list{
+    counter-reset: item;
+    /* counter-reset: titel; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20ch), 1fr));
+    place-items: center;
+    gap: 30px; 
+}
+
+.step__item{
+    padding-block-start: 35px;
+    padding-inline-start: 20px;
+    width: 100%;
+    border-radius: 10px;
+    background: #201E29;
+    position: relative;
+}
+.step__item::before{
+    counter-increment: item; 
+    content: 'steps ' counter(item) '';
+    display: block;
+    color: #FA5E10;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    position: absolute;
+    left: 20px;
+    top: 36px;
+    z-index: 1;
+    z-index: 10;
+}
+
+.step__item::after{
+    display: block;
+    color: #2C2A38;
+    font-family: Inter;
+    font-size: 126px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 76.523%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.step__item:nth-child(1)::after{
+    content: "01";
+}
+.step__item:nth-child(2)::after{
+    content: "02";
+}
+.step__item:nth-child(3)::after{
+    content: "03";
+}
+.step__item:nth-child(4)::after{
+    content: "04";
+}
+
+
+.item__title{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    gap: 15px;
+    margin-block-start: 23px;
+    margin-block-end: 15px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+}
+.item__title::after{
+    content: "";
+    display: block;
+    height: 1px;
+    width: 230px;
+    background: #3C3A42;
+    position: relative;
+    z-index: 10;
+}
+
+.item__description{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 161.523%;
+    max-width: 230px;
+    padding-block-end: 20px;
+    position: relative;
+    z-index: 10;
+}
