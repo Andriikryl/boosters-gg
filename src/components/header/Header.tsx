@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Container } from "../container/Container";
 import style from "./style.module.css";
 import Link from "next/link";
@@ -109,11 +109,16 @@ const sideLinks = [
 export default function Header() {
   const [activeState, setActiveState] = useState(false);
   const [activeStateSide, setActiveStateSide] = useState(false);
+  const sideNavRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const html = document.querySelector("html");
     if (html) html.classList.toggle("dis-scroll", activeState);
   }, [activeState]);
+  // useEffect(() => {
+  //   const html = document.querySelector("html");
+  //   if (html) html.classList.toggle("dis-scroll", activeStateSide);
+  // }, [activeStateSide]);
 
   const handleClick = () => {
     setActiveState((prev) => !prev);
@@ -121,6 +126,23 @@ export default function Header() {
   const handleClickSide = () => {
     setActiveStateSide((prev) => !prev);
   };
+
+  const handleOutsideClick = (e: MouseEvent) => {
+    if (sideNavRef.current && !sideNavRef.current.contains(e.target as Node)) {
+      setActiveStateSide(false);
+    }
+  };
+  useEffect(() => {
+    if (activeStateSide) {
+      document.addEventListener("click", handleOutsideClick);
+    } else {
+      document.removeEventListener("click", handleOutsideClick);
+    }
+    return () => {
+      document.removeEventListener("click", handleOutsideClick);
+    };
+  }, [activeStateSide]);
+
   return (
     <header className={style.header}>
       <Container className={style.header__container}>
@@ -133,7 +155,9 @@ export default function Header() {
             <Image src={Logo} width={270} height={57} alt="Booster gg" />
           </Link>
           <HeaderNav activeState={activeState} links={links} />
-          <SideNav activeStateSide={activeStateSide} sideLinks={sideLinks} />
+          <div ref={sideNavRef}>
+            <SideNav activeStateSide={activeStateSide} sideLinks={sideLinks} />
+          </div>
           <BurgerButton onClick={handleClick} activeState={activeState} />
         </div>
       </Container>

@@ -71,7 +71,7 @@ export default function SpliteCard({
       </div>
       <div className={style.code__box}>
         <span className={style.item__discount}>{item.discount}% Discount</span>
-        <div>
+        <div className={style.flex}>
           <div className={style.btn__box}>
             <span className={style.promocode__title}>Promocode:</span>
             <ClipboardCopy copyText={item.promocode} />

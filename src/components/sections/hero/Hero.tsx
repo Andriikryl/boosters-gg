@@ -22,11 +22,13 @@ export default function Hero() {
             </p>
             <Button type="button__bust">Boosting now</Button>
           </div>
-          <div className={style.image__box}>
-            <Image src={Prevu} width={481} height={481} alt="" />
-          </div>
         </div>
       </Container>
+      <div className={style.side__box}>
+        <div className={style.image__box}>
+          <Image src={Prevu} width={481} height={481} alt="" />
+        </div>
+      </div>
     </section>
   );
 }

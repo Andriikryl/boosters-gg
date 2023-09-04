@@ -192,3 +192,29 @@
     gap: 17px;
     margin-inline-start: 23px;
 }
+
+
+@media (max-width:1300px) {
+    .list__item{
+        max-width: 374px;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .paymaent__box{
+        display: none;
+    }
+    .item__discount{
+        display: none;
+    }
+    .flex{
+        display: flex;
+        gap: 20px;
+    }
+    .raite__box{
+        display: none;
+    }
+    .flex__group{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

@@ -29,16 +29,19 @@
 .flex__group{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .hero__text{
     max-width: 681px;
+    position: relative;
+    z-index: 20;
 }
 
 .hero__title{
     color: #FFF;
     font-family: Inter;
-    font-size: 60px;
+    font-size: clamp(20px, 5vw + 1rem, 60px);
     font-style: normal;
     font-weight: 900;
     line-height: normal;
@@ -58,6 +61,21 @@
 .image__box{
     position: relative;
     z-index: 10;
+}
+
+.side__box{
+    position: absolute;
+    width: max-content;
+    top: 150px;
+    right: 0;
+    z-index: 10;
+}
+
+@media (max-width:800px) {
+    .side__box{
+        bottom: 0;
+        top: auto;
+    }
 }
 
 .image__box::after{

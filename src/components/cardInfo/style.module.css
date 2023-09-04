@@ -173,3 +173,10 @@
     background: #FB5;
 }
 
+
+
+@media (max-width:900px) {
+    .button__group{
+        flex-wrap: wrap;
+    }
+}

@@ -35,3 +35,10 @@
     flex-direction: column;
     gap: 30px;
 }
+
+
+@media (max-width:463px) {
+    .info__container{
+        display: block;
+    }
+}
