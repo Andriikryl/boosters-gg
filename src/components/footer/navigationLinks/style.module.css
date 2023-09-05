@@ -1,0 +1,26 @@
+.item__title{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-block-end: 30px;
+}
+
+.item__list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inner__link{
+    color: #D3D3D3;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 200%; 
+    text-decoration: none;
+}
