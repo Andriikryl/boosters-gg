@@ -9,6 +9,7 @@ import BurgerButton from "./BurgerButton";
 import BurgerSideBar from "./BurgerSideBar";
 import SideNav from "./SideNav";
 import HeaderNav from "./HeaderNav";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const links = [
   {
@@ -111,14 +112,32 @@ export default function Header() {
   const [activeStateSide, setActiveStateSide] = useState(false);
   const sideNavRef = useRef<HTMLDivElement | null>(null);
 
+  const { scrollYProgress } = useScroll();
+  const backgroundColor = useTransform(
+    scrollYProgress,
+    [0, 0.15],
+    ["rgba(0,0,0,0)", "rgba(0,0,0,0)"]
+  );
+  const backdropFilter = useTransform(
+    scrollYProgress,
+    [0, 0.15],
+    ["blur(0px)", "blur(20px)"]
+  );
+  const borderWidth = useTransform(scrollYProgress, [0, 0.01, 0.02], [0, 0, 1]);
+  const boxShadow = useTransform(
+    scrollYProgress,
+    [0, 0.15],
+    ["0 0 0 rgba(0,0,0,0)", "3px 3px 0 rgba(0,0,0,0.12)"]
+  );
+
   useEffect(() => {
     const html = document.querySelector("html");
     if (html) html.classList.toggle("dis-scroll", activeState);
   }, [activeState]);
-  // useEffect(() => {
-  //   const html = document.querySelector("html");
-  //   if (html) html.classList.toggle("dis-scroll", activeStateSide);
-  // }, [activeStateSide]);
+  useEffect(() => {
+    const html = document.querySelector("html");
+    if (html) html.classList.toggle("dis-scroll", activeStateSide);
+  }, [activeStateSide]);
 
   const handleClick = () => {
     setActiveState((prev) => !prev);
@@ -144,7 +163,19 @@ export default function Header() {
   }, [activeStateSide]);
 
   return (
-    <header className={style.header}>
+    <motion.header
+      className={style.header}
+      initial="hidden"
+      whileInView="visible"
+      style={{
+        backgroundColor,
+        backdropFilter,
+        borderWidth,
+        borderStyle: "solid",
+        borderColor: "rgb(112, 90, 102)",
+        boxShadow,
+      }}
+    >
       <Container className={style.header__container}>
         <BurgerSideBar
           onClick={handleClickSide}
@@ -161,6 +192,6 @@ export default function Header() {
           <BurgerButton onClick={handleClick} activeState={activeState} />
         </div>
       </Container>
-    </header>
+    </motion.header>
   );
 }
