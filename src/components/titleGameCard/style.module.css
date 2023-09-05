@@ -1,0 +1,19 @@
+.card{
+    max-width: 260px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card__title{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 24px;
+    left: 15px;
+}

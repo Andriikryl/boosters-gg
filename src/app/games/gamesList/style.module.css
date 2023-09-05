@@ -1,0 +1,21 @@
+.games{
+    padding-block: 100px;
+}
+
+.games__title{
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    margin-block-end: 48px;
+}
+
+.game__list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+    place-items: center; 
+    gap: 40px;  
+}
