@@ -245,7 +245,7 @@
       left: 0;
       top: 0;
       width: 30%;
-      background: hsl(252, 17%, 12%, .7);
+      background: hsl(252, 17%, 12%, .9);
       backdrop-filter: blur(30px);
       height: 100vh;
       z-index: 20;
