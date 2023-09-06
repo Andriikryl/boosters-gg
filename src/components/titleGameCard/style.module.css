@@ -3,7 +3,17 @@
     border-radius: 10px;
     overflow: hidden;
     position: relative;
+    transition: all 500ms ease-in-out;
 }
+
+.card:hover{
+    border-radius: 10px;
+    border: 2px solid #FDFEF6;
+    box-shadow: 0px 0px 8px 0px #DDA4EA, 0px 0px 4px 0px #DDA4EA, 0px 0px 20px 0px #DDA4EA, 0px 0px 20px 0px #DDA4EA;
+    transform: scale(1.1);
+}
+
+
 
 .card__title{
     color: #FFF;

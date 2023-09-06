@@ -19,3 +19,7 @@
     place-items: center; 
     gap: 40px;  
 }
+
+.game__list:has(li:hover) li:not(:hover){
+    filter: grayscale(90%) sepia(50%);
+}

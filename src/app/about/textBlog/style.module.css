@@ -1,0 +1,36 @@
+.text{
+    padding-block: 120px;
+}
+
+.text__box{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    /* flex-wrap: wrap; */
+}
+
+.text__title{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 161.523%;
+    margin-block-end: 30px;
+}
+
+.description__box{
+    max-width: 570px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.text__description{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 161.523%;
+}

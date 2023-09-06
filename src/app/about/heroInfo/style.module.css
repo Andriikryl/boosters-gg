@@ -1,0 +1,20 @@
+.info{
+    padding-block: 80px;
+}
+.info__box{
+    padding: 30px;
+    max-width: 1100px;
+    border-radius: 20px;
+    border: 2px solid #9C8064;
+    background: #04080B;
+    margin-inline: auto;
+}
+
+.info__text{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 161.523%;
+}
