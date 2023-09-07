@@ -4,6 +4,7 @@ import { Container } from "../container/Container";
 import ContactGroup from "./contactGroup/ContactGroup";
 import LegalGroup from "./legalGroup/LegalGroup";
 import NavigationLinks from "./navigationLinks/NavigationLinks";
+import BackToTopBtn from "../backToTopBtn/BackToTopBtn";
 
 export default function Footer() {
   return (
@@ -13,6 +14,7 @@ export default function Footer() {
           <ContactGroup />
           <LegalGroup />
           <NavigationLinks />
+          <BackToTopBtn />
         </div>
       </Container>
     </footer>
