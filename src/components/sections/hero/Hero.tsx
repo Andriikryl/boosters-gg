@@ -4,6 +4,7 @@ import style from "./style.module.css";
 import { Button } from "@/components/button/Button";
 import Image from "next/image";
 import Prevu from "public/hero/bg-content.png";
+import Marquue from "@/components/Marquue/Marquue";
 
 export default function Hero() {
   return (
@@ -24,6 +25,9 @@ export default function Hero() {
           </div>
         </div>
       </Container>
+      <div className={style.marquue__box}>
+        <Marquue />
+      </div>
       <div className={style.side__box}>
         <div className={style.image__box}>
           <Image src={Prevu} width={481} height={481} alt="" />
