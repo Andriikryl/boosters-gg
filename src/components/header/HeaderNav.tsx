@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Link from "next/link";
 import style from "./style.module.css";
 
@@ -24,6 +25,9 @@ export default function HeaderNav({ activeState, links }: IHeaderNav) {
             </li>
           );
         })}
+        {/* <li className={style.list__item}>
+          <ButtonSearch onClick={handleClickSearch} />
+        </li> */}
       </ul>
     </nav>
   );

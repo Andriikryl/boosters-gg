@@ -5,11 +5,13 @@ import style from "./style.module.css";
 import Link from "next/link";
 import Logo from "public/logo/logo.svg";
 import Image from "next/image";
-import BurgerButton from "./BurgerButton";
-import BurgerSideBar from "./BurgerSideBar";
+import BurgerButton from "./buttonsHeader/BurgerButton";
+import BurgerSideBar from "./buttonsHeader/BurgerSideBar";
 import SideNav from "./SideNav";
 import HeaderNav from "./HeaderNav";
 import { motion, useScroll, useTransform } from "framer-motion";
+import SearchSpace from "./SearchSpace";
+import ButtonSearch from "./buttonsHeader/ButtonSearch";
 
 const links = [
   {
@@ -110,6 +112,8 @@ const sideLinks = [
 export default function Header() {
   const [activeState, setActiveState] = useState(false);
   const [activeStateSide, setActiveStateSide] = useState(false);
+  const [activeSearch, setActiveSearch] = useState(false);
+
   const sideNavRef = useRef<HTMLDivElement | null>(null);
 
   const { scrollYProgress } = useScroll();
@@ -144,6 +148,10 @@ export default function Header() {
   };
   const handleClickSide = () => {
     setActiveStateSide((prev) => !prev);
+  };
+
+  const handleClickSearch = () => {
+    setActiveSearch((prev) => !prev);
   };
 
   const handleOutsideClick = (e: MouseEvent) => {
@@ -189,6 +197,11 @@ export default function Header() {
           <div ref={sideNavRef}>
             <SideNav activeStateSide={activeStateSide} sideLinks={sideLinks} />
           </div>
+          <ButtonSearch onClick={handleClickSearch} />
+          <SearchSpace
+            activeSearch={activeSearch}
+            onClick={handleClickSearch}
+          />
           <BurgerButton onClick={handleClick} activeState={activeState} />
         </div>
       </Container>
