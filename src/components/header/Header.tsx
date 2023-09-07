@@ -15,7 +15,7 @@ const links = [
   {
     id: 1,
     link: "Home",
-    href: "/home",
+    href: "/",
   },
   {
     id: 2,

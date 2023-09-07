@@ -1,0 +1,26 @@
+.hero{
+    padding-block: 200px;
+}
+
+.hero__title{
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-block-end: 30px;
+}
+
+.hero__description{
+    max-width: 920px;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 165.523%; 
+    margin-inline: auto;
+}
