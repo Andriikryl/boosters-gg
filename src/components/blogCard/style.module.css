@@ -24,6 +24,28 @@
     background-image: url("/blog/im-3.png");
 }
 
+
+.list__item:nth-child(4){
+    background-image: url("/blog/im-1.png");
+}
+.list__item:nth-child(5){
+    background-image: url("/blog/im-2.png");
+}
+.list__item:nth-child(6){
+    background-image: url("/blog/im-3.png");
+}
+
+
+.list__item:nth-child(7){
+    background-image: url("/blog/im-1.png");
+}
+.list__item:nth-child(8){
+    background-image: url("/blog/im-2.png");
+}
+.list__item:nth-child(9){
+    background-image: url("/blog/im-3.png");
+}
+
 .item__text{
     clip-path: polygon(0% 100%, 0 18%, 100% 0, 100% 100%);
     background-color: #2C2A32;

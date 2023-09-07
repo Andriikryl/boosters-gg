@@ -1,0 +1,20 @@
+.card__box{
+    margin-block-end: 100px;
+}
+
+.tabs__container{
+    margin-block-end: 40px;
+}
+
+.blog__list{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-block-end: 50px;
+}
+
+.button{
+    width: max-content;
+    margin-inline: auto;
+}
